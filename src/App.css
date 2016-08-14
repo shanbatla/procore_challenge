@@ -14,3 +14,7 @@ html * {
   margin-bottom: 7.5px;
   font-size: 18px;
 }
+
+.modal-button {
+  float: right;
+}
