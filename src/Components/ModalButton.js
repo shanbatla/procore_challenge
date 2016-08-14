@@ -5,7 +5,7 @@ class ModalButton extends Component {
   render() {
     return (
       <div>
-        <button className="modal-button">+ Contacts Keeper</button>
+        <button type="button" className="btn btn-primary modal-button">+ Contacts Keeper</button>
       </div>
     );
   }
