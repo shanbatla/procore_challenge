@@ -10,12 +10,12 @@ class Table extends Component {
     this.fakedata = [
      {
         "id": 0,
-        "firstName": "Mayer",
-        "lastName": "Kapowsin",
-        "dateOfBirth": "1/1/1980",
-        "phoneNumber": "212-222-3333",
-        "address": "123 Whatever Lane",
-        "notes": "Fake notes"
+        "First Name": "Mayer",
+        "Last Name": "Kapowsin",
+        "Date of Birth": "1/1/1980",
+        "Phone Number": "212-222-3333",
+        "Address": "123 Whatever Lane",
+        "Notes": "Fake Notes"
       }
     ]
   }
@@ -23,7 +23,7 @@ class Table extends Component {
   render () {
     return (
       <Griddle results={this.fakedata} tableClassName="table" showFilter={true} showSettings={true} 
-      columns={["firstName", "lastName", "dateOfBirth", "phoneNumber", "address", "notes"]}/>
+      columns={["First Name", "Last Name", "Date of Birth", "Phone Number", "Address", "Notes"]}/>
     )
   }
 }
