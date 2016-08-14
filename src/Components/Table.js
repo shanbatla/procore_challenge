@@ -11,7 +11,6 @@ class Table extends Component {
 
     this.fakedata = [
      {
-        "id": 0,
         "First Name": "Mayer",
         "Last Name": "Kapowsin",
         "Date of Birth": "1/1/1980",
@@ -20,7 +19,6 @@ class Table extends Component {
         "Notes": "Fake Notes"
       },
       {
-        "id": 0,
         "First Name": "Joe",
         "Last Name": "Shmow",
         "Date of Birth": "1/1/1970",
@@ -33,7 +31,7 @@ class Table extends Component {
  
   render () {
     return (
-      <Griddle results={this.fakedata} tableClassName="table" showFilter={true} showSettings={true} columns={this.columns} showPager={false}/>
+      <Griddle results={this.fakedata} tableClassName="table" showFilter={true} showSettings={false} columns={this.columns} showPager={false}/>
     )
   }
 }
