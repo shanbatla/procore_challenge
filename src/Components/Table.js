@@ -5,7 +5,9 @@ class Table extends Component {
 
   constructor(props) {
 
-    super(props)
+    super(props);
+
+    this.columns = ["First Name", "Last Name", "Date of Birth", "Phone Number", "Address", "Notes"];
 
     this.fakedata = [
      {
@@ -16,14 +18,22 @@ class Table extends Component {
         "Phone Number": "212-222-3333",
         "Address": "123 Whatever Lane",
         "Notes": "Fake Notes"
+      },
+      {
+        "id": 0,
+        "First Name": "Joe",
+        "Last Name": "Shmow",
+        "Date of Birth": "1/1/1970",
+        "Phone Number": "212-222-3333",
+        "Address": "123 Whatever Lane",
+        "Notes": "Fake Notes"
       }
-    ]
+    ];
   }
  
   render () {
     return (
-      <Griddle results={this.fakedata} tableClassName="table" showFilter={true} showSettings={true} 
-      columns={["First Name", "Last Name", "Date of Birth", "Phone Number", "Address", "Notes"]}/>
+      <Griddle results={this.fakedata} tableClassName="table" showFilter={true} showSettings={true} columns={this.columns} showPager={false}/>
     )
   }
 }
