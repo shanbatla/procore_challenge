@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import '../App.css';
 
 class Header extends Component {
   render() {
     return (
-      <div className="container-fluid">
-        <h2>Contacts Keeper</h2>
+      <div className="header">
+        <div className="header-text">
+          <p>Contacts Keeper</p>
+        </div>
       </div>
     );
   }
