@@ -1,0 +1,16 @@
+html * {
+  font-family: Verdana;
+}
+
+.header {
+  background-color: orange;
+  height: 80px;
+  padding: 20px;
+  color: white;
+  border-bottom: 15px solid #F5F5F5;
+}
+
+.header-text {
+  margin-bottom: 7.5px;
+  font-size: 18px;
+}
