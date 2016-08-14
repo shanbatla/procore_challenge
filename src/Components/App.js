@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import Header from './Header'
 
 class App extends Component {
   render() {
     return (
-      <div className="container-fluid">
-        <h2>Contacts Keeper</h2>
-      </div>
+      <Header/>
     );
   }
 }
