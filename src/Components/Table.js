@@ -4,11 +4,10 @@ import Griddle from 'griddle-react';
 class Table extends Component {
 
   constructor(props) {
-
     super(props);
 
     this.columns = ["First Name", "Last Name", "Date of Birth", "Phone Number", "Address", "Notes"];
-
+    
     this.fakedata = [
      {
         "First Name": "Mayer",

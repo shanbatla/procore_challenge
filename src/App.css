@@ -18,3 +18,9 @@ html * {
 .modal-button {
   float: right;
 }
+
+.modal-header {
+  background-color: #428bca;
+  color: white;
+  margin-bottom: 30px;
+}

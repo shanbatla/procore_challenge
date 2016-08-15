@@ -3,10 +3,14 @@ import Modal from 'react-modal';
 import '../App.css';
 
 class ModalButton extends Component {
-  constructor() {
-    super();
+  
+  constructor(props) {
+    super(props);
+    
     this.openModal = this.openModal.bind(this);
+    
     this.closeModal = this.closeModal.bind(this);
+    
     this.state = {
       open: false
     };
@@ -29,6 +33,9 @@ class ModalButton extends Component {
       <div>
         <button onClick={this.openModal} type="button" className="btn btn-primary modal-button">+ Contacts Keeper</button>
         <Modal isOpen={this.state.open}>
+          
+          <div className="modal-header">Contacts Keeper</div>
+
           <div className="form-group">
             <label for="first-name">First Name</label>
             <input type="text" className="form-control" id="first-name"/>
@@ -46,14 +53,14 @@ class ModalButton extends Component {
             <input type="text" className="form-control" id="phone-number"/>
           </div>
           <div className="form-group">
-            <label for="adress">Address</label>
-            <input type="text" className="form-control" id="adress"/>
+            <label for="address">Address</label>
+            <input type="text" className="form-control" id="address"/>
           </div>
           <div className="form-group">
             <label for="notes">Notes</label>
             <input type="text" className="form-control" id="notes"/>
           </div>
-          <button onClick={this.closeModal} className="btn btn-primary modal-button">Save</button>
+          <button onSubmit={this.closeModal} onClick={this.closeModal} className="btn btn-primary modal-button" type="submit">Save</button>
         </Modal>
       </div>
     );
