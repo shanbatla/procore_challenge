@@ -31,7 +31,7 @@ class Table extends Component {
  
   render () {
     return (
-      <Griddle results={this.fakedata} tableClassName="table" showFilter={true} showSettings={false} columns={this.columns} showPager={false}/>
+      <Griddle results={this.fakedata} tableClassName="table" showFilter={true} showSettings={false} columns={this.columns} showPager={false} filterPlaceholderText={"Search"}/>
     )
   }
 }
