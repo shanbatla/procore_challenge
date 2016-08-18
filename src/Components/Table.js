@@ -19,6 +19,10 @@ class Table extends Component {
       contacts: []
     };
   }
+
+  componentDidMount() {
+    this.state.contacts.pop();
+  }
  
   render() {
     this.state.contacts.push(this.props.contact);
