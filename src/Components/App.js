@@ -7,16 +7,7 @@ import '../App.css';
 class App extends Component {
   
   constructor(props) {
-    super(props)
-
-    // this.state = {
-    //   firstName: '',
-    //   lastName: '',
-    //   dateOfBirth: '',
-    //   phoneNumber: '',
-    //   address: '',
-    //   notes: ''
-    // }
+    super(props);
 
     this.state = {
       "First Name": '',
@@ -26,7 +17,7 @@ class App extends Component {
       "Address": '',
       "Notes": ''
     }
-  }
+  };
 
   setFormData(form) {
     this.setState({

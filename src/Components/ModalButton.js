@@ -43,7 +43,6 @@ class ModalButton extends Component {
     };
 
     this.props.setFormData(formData);
-
   }
 
   render() {
@@ -81,8 +80,8 @@ class ModalButton extends Component {
               <input type="text" className="form-control" ref="notes"/>
             </div>
           </form>
-          <button onClick={this.closeModal} className="btn btn-primary modal-button" type="submit">Save</button>
 
+          <button onClick={this.closeModal} className="btn btn-primary modal-button" type="submit">Save</button>
         </Modal>
       </div>
     );

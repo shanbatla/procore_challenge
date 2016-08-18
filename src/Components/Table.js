@@ -5,18 +5,23 @@ class Table extends Component {
 
   constructor(props) {
     super(props);
-
-    this.columns = ["First Name", "Last Name", "Date of Birth", "Phone Number", "Address", "Notes"];
+    
+    this.columns = [
+      "First Name", 
+      "Last Name", 
+      "Date of Birth", 
+      "Phone Number", 
+      "Address", 
+      "Notes"
+    ];
 
     this.state = {
       contacts: []
-    }
+    };
   }
  
   render() {
-    
     this.state.contacts.push(this.props.contact);
-    console.log(this.state.contacts);
 
     return (
       <Griddle 
@@ -27,7 +32,7 @@ class Table extends Component {
         columns={this.columns} 
         showPager={false} 
         filterPlaceholderText={"Search"}/>
-    )
+    );
   }
 }
 
