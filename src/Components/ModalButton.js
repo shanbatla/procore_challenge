@@ -10,8 +10,6 @@ class ModalButton extends Component {
     this.openModal = this.openModal.bind(this);
     
     this.closeModal = this.closeModal.bind(this);
-
-    this.setContact = this.setContact.bind(this);
     
     this.state = {
       open: false,
@@ -44,11 +42,8 @@ class ModalButton extends Component {
       notes: this.refs.notes.value
     };
 
-  }
+    this.props.setFormData(formData);
 
-  setContact(e) {
-    e.preventDefault();
-    console.log(e.target.value);
   }
 
   render() {
@@ -60,7 +55,7 @@ class ModalButton extends Component {
           
           <div className="modal-header">Contacts Keeper</div>
 
-          <form onSubmit={this.setContact}>
+          <form>
             <div className="form-group">
               <label htmlFor="first-name">First Name</label>
               <input type="text" className="form-control" ref="firstName"/>

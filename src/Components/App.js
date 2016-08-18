@@ -19,14 +19,14 @@ class App extends Component {
     }
   }
 
-  onChange(value) {
+  setFormData(form) {
     this.setState({
-      firstName: value.firstName,
-      lastName: value.lastName,
-      dateOfBirth: value.dateOfBirth,
-      phoneNumber: value.phoneNumber,
-      address: value.address,
-      notes: value.notes
+      firstName: form.firstName,
+      lastName: form.lastName,
+      dateOfBirth: form.dateOfBirth,
+      phoneNumber: form.phoneNumber,
+      address: form.address,
+      notes: form.notes
     });
   }
 
@@ -34,7 +34,7 @@ class App extends Component {
     return (
       <div>
         <Header/>
-        <ModalButton onChange={this.onChange.bind(this)}/>
+        <ModalButton setFormData={this.setFormData.bind(this)}/>
         <Table contact={this.state}/>
       </div>
     );

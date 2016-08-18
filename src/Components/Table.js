@@ -7,7 +7,12 @@ class Table extends Component {
     super(props);
 
     this.columns = ["First Name", "Last Name", "Date of Birth", "Phone Number", "Address", "Notes"];
-    
+    // this.columns = ["firstName", "lastName", "dateOfBirth", "phoneNumber", "address", "notes"];
+
+    this.state = {
+      contacts: []
+    }
+
     this.fakedata = [
      {
         "First Name": "Mayer",
@@ -26,11 +31,23 @@ class Table extends Component {
         "Notes": "Fake Notes"
       }
     ];
+
   }
  
-  render () {
+  render() {
+    
+    this.state.contacts.push(this.props.contact);
+    console.log(this.state.contacts);
+
     return (
-      <Griddle results={this.fakedata} tableClassName="table" showFilter={true} showSettings={false} columns={this.columns} showPager={false} filterPlaceholderText={"Search"}/>
+      <Griddle 
+        results={this.fakedata} 
+        tableClassName="table" 
+        showFilter={true} 
+        showSettings={false} 
+        columns={this.columns} 
+        showPager={false} 
+        filterPlaceholderText={"Search"}/>
     )
   }
 }
