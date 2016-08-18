@@ -29,10 +29,6 @@ class ModalButton extends Component {
   }
 
   closeModal() {
-    this.setState({
-      open: false
-    });
-
     const formData = {
       firstName: this.refs.firstName.value,
       lastName: this.refs.lastName.value,
@@ -42,7 +38,15 @@ class ModalButton extends Component {
       notes: this.refs.notes.value
     };
 
-    this.props.setFormData(formData);
+    if(formData.firstName && formData.lastName && formData.dateOfBirth && formData.phoneNumber && formData.address && formData.notes) {
+      this.props.setFormData(formData);
+      this.setState({
+        open: false
+      });      
+    } else {
+      alert('Please enter valid data.');
+    }
+
   }
 
   render() {
