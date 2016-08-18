@@ -10,27 +10,32 @@ class App extends Component {
     super(props)
 
     this.state = {
-      fieldVals: {
-        firstName: null,
-        lastName: null,
-        dateOfBirth: null,
-        phoneNumber: null,
-        address: null,
-        notes: null
-      }
+      firstName: '',
+      lastName: '',
+      dateOfBirth: '',
+      phoneNumber: '',
+      address: '',
+      notes: ''
     }
   }
 
-  onChange() {
-    
+  onChange(value) {
+    this.setState({
+      firstName: value.firstName,
+      lastName: value.lastName,
+      dateOfBirth: value.dateOfBirth,
+      phoneNumber: value.phoneNumber,
+      address: value.address,
+      notes: value.notes
+    });
   }
 
   render() {
     return (
       <div>
         <Header/>
-        <ModalButton/>
-        <Table/>
+        <ModalButton onChange={this.onChange.bind(this)}/>
+        <Table contact={this.state}/>
       </div>
     );
   }

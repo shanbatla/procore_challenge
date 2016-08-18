@@ -10,9 +10,17 @@ class ModalButton extends Component {
     this.openModal = this.openModal.bind(this);
     
     this.closeModal = this.closeModal.bind(this);
+
+    this.setContact = this.setContact.bind(this);
     
     this.state = {
-      open: false
+      open: false,
+      firstName: '',
+      lastName: '',
+      dateOfBirth: '',
+      phoneNumber: '',
+      address: '',
+      notes: ''
     };
   }
 
@@ -25,10 +33,26 @@ class ModalButton extends Component {
   closeModal() {
     this.setState({
       open: false
-    }); 
+    });
+
+    const formData = {
+      firstName: this.refs.firstName.value,
+      lastName: this.refs.lastName.value,
+      dateOfBirth: this.refs.dateOfBirth.value,
+      phoneNumber: this.refs.phoneNumber.value,
+      address: this.refs.address.value,
+      notes: this.refs.notes.value
+    };
+
+  }
+
+  setContact(e) {
+    e.preventDefault();
+    console.log(e.target.value);
   }
 
   render() {
+    
     return (
       <div>
         <button onClick={this.openModal} type="button" className="btn btn-primary modal-button">+ Contacts Keeper</button>
@@ -36,31 +60,34 @@ class ModalButton extends Component {
           
           <div className="modal-header">Contacts Keeper</div>
 
-          <div className="form-group">
-            <label for="first-name">First Name</label>
-            <input type="text" className="form-control" id="first-name"/>
-          </div>
-          <div className="form-group">
-            <label for="last-name">Last Name</label>
-            <input type="text" className="form-control" id="last-name"/>
-          </div>
-          <div className="form-group">
-            <label for="date-of-birth">Date of Birth</label>
-            <input type="text" className="form-control" id="date-of-birth"/>
-          </div>
-          <div className="form-group">
-            <label for="phone-number">Phone Number</label>
-            <input type="text" className="form-control" id="phone-number"/>
-          </div>
-          <div className="form-group">
-            <label for="address">Address</label>
-            <input type="text" className="form-control" id="address"/>
-          </div>
-          <div className="form-group">
-            <label for="notes">Notes</label>
-            <input type="text" className="form-control" id="notes"/>
-          </div>
-          <button onSubmit={this.closeModal} onClick={this.closeModal} className="btn btn-primary modal-button" type="submit">Save</button>
+          <form onSubmit={this.setContact}>
+            <div className="form-group">
+              <label htmlFor="first-name">First Name</label>
+              <input type="text" className="form-control" ref="firstName"/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="last-name">Last Name</label>
+              <input type="text" className="form-control" ref="lastName"/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="date-of-birth">Date of Birth</label>
+              <input type="text" className="form-control" ref="dateOfBirth"/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="phone-number">Phone Number</label>
+              <input type="text" className="form-control" ref="phoneNumber"/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="address">Address</label>
+              <input type="text" className="form-control" ref="address"/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="notes">Notes</label>
+              <input type="text" className="form-control" ref="notes"/>
+            </div>
+          </form>
+          <button onClick={this.closeModal} className="btn btn-primary modal-button" type="submit">Save</button>
+
         </Modal>
       </div>
     );
