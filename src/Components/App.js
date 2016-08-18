@@ -9,24 +9,33 @@ class App extends Component {
   constructor(props) {
     super(props)
 
+    // this.state = {
+    //   firstName: '',
+    //   lastName: '',
+    //   dateOfBirth: '',
+    //   phoneNumber: '',
+    //   address: '',
+    //   notes: ''
+    // }
+
     this.state = {
-      firstName: '',
-      lastName: '',
-      dateOfBirth: '',
-      phoneNumber: '',
-      address: '',
-      notes: ''
+      "First Name": '',
+      "Last Name": '',
+      "Date of Birth": '',
+      "Phone Number": '',
+      "Address": '',
+      "Notes": ''
     }
   }
 
   setFormData(form) {
     this.setState({
-      firstName: form.firstName,
-      lastName: form.lastName,
-      dateOfBirth: form.dateOfBirth,
-      phoneNumber: form.phoneNumber,
-      address: form.address,
-      notes: form.notes
+      "First Name": form.firstName,
+      "Last Name": form.lastName,
+      "Date of Birth": form.dateOfBirth,
+      "Phone Number": form.phoneNumber,
+      "Address": form.address,
+      "Notes": form.notes
     });
   }
 
