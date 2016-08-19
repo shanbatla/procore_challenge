@@ -28,14 +28,16 @@ class Table extends Component {
     this.state.contacts.push(this.props.contact);
 
     return (
-      <Griddle 
-        results={this.state.contacts} 
-        tableClassName="table" 
-        showFilter={true} 
-        showSettings={false} 
-        columns={this.columns} 
-        showPager={false} 
-        filterPlaceholderText={"Search"}/>
+      <div className="center">
+        <Griddle 
+          results={this.state.contacts} 
+          tableClassName="table" 
+          showFilter={true} 
+          showSettings={false} 
+          columns={this.columns} 
+          showPager={false} 
+          filterPlaceholderText={"Search"}/>
+        </div>
     );
   }
 }

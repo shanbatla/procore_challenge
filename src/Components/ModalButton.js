@@ -59,7 +59,7 @@ class ModalButton extends Component {
   render() {
     
     return (
-      <div>
+      <div className="center">
         <button onClick={this.openModal} type="button" className="btn btn-primary modal-button">+ Contacts Keeper</button>
         <Modal isOpen={this.state.open}>
           
