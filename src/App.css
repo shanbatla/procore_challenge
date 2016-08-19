@@ -47,3 +47,14 @@ html * {
   background-color: gray;
   border: none;
 }
+
+#plus-icon {
+  text-align: center;
+  display: inline-block;
+  border-radius: 100%;
+  background-color: white;
+  color: blue;
+  padding: 1px;
+  margin-right: 2.5px;
+  width: 17.5px;
+}
