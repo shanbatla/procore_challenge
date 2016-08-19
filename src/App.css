@@ -25,6 +25,7 @@ html * {
   background-color: #428bca;
   color: white;
   margin-bottom: 30px;
+  width: 750px;
 }
 
 #close-button {
@@ -61,5 +62,15 @@ html * {
 }
 
 input {
+  width: 25% !important;
   margin-bottom: 30px;
+}
+
+th {
+  background-color: gray;
+  color: white;
+}
+
+#modal-input {
+  width: 100% !important;
 }

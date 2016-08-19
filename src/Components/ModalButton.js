@@ -10,6 +10,17 @@ class ModalButton extends Component {
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.justCloseModal = this.justCloseModal.bind(this);
+
+    this.customStyles = {
+      content : {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)'
+      }
+    };
     
     this.state = {
       open: false,
@@ -59,7 +70,7 @@ class ModalButton extends Component {
     return (
       <div className="center">
         <button onClick={this.openModal} type="button" className="btn btn-primary modal-button"><span id="plus-icon">+</span> Contacts Keeper</button>
-        <Modal isOpen={this.state.open}>
+        <Modal isOpen={this.state.open} style={this.customStyles}>
           
           <div className="modal-header">
             Contacts Keeper
@@ -71,27 +82,27 @@ class ModalButton extends Component {
           <form>
             <div className="form-group">
               <label htmlFor="first-name">First Name</label>
-              <input type="text" className="form-control" ref="firstName"/>
+              <input type="text" className="form-control" id="modal-input" ref="firstName"/>
             </div>
             <div className="form-group">
               <label htmlFor="last-name">Last Name</label>
-              <input type="text" className="form-control" ref="lastName"/>
+              <input type="text" className="form-control" id="modal-input" ref="lastName"/>
             </div>
             <div className="form-group">
               <label htmlFor="date-of-birth">Date of Birth</label>
-              <input type="text" className="form-control" ref="dateOfBirth"/>
+              <input type="text" className="form-control" id="modal-input" ref="dateOfBirth"/>
             </div>
             <div className="form-group">
               <label htmlFor="phone-number">Phone Number</label>
-              <input type="text" className="form-control" ref="phoneNumber"/>
+              <input type="text" className="form-control" id="modal-input" ref="phoneNumber"/>
             </div>
             <div className="form-group">
               <label htmlFor="address">Address</label>
-              <input type="text" className="form-control" ref="address"/>
+              <input type="text" className="form-control" id="modal-input" ref="address"/>
             </div>
             <div className="form-group">
               <label htmlFor="notes">Notes</label>
-              <input type="text" className="form-control" ref="notes"/>
+              <input type="text" className="form-control" id="modal-input" ref="notes"/>
             </div>
           </form>
 

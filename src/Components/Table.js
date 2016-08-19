@@ -36,7 +36,7 @@ class Table extends Component {
           showSettings={false} 
           columns={this.columns} 
           showPager={false}
-          useGriddleStyles={true} 
+          useGriddleStyles={false} 
           filterPlaceholderText={"Search"}/>
         </div>
     );
