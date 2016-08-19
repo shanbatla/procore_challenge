@@ -8,9 +8,7 @@ class ModalButton extends Component {
     super(props);
     
     this.openModal = this.openModal.bind(this);
-    
     this.closeModal = this.closeModal.bind(this);
-
     this.justCloseModal = this.justCloseModal.bind(this);
     
     this.state = {
@@ -102,6 +100,6 @@ class ModalButton extends Component {
       </div>
     );
   }
-}
+};
 
 export default ModalButton;

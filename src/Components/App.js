@@ -17,7 +17,7 @@ class App extends Component {
       "Address": '',
       "Notes": ''
     }
-  };
+  }
 
   setFormData(form) {
     this.setState({
@@ -39,6 +39,6 @@ class App extends Component {
       </div>
     );
   }
-}
+};
 
 export default App;
