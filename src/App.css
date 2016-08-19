@@ -48,6 +48,7 @@ html * {
 #save-button {
   background-color: gray;
   border: none;
+  font-size: 10px;
 }
 
 #plus-icon {
