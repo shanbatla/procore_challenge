@@ -42,3 +42,8 @@ html * {
   margin-left: auto;
   padding: 10px;
 }
+
+#save-button {
+  background-color: gray;
+  border: none;
+}

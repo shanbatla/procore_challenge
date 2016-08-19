@@ -97,7 +97,7 @@ class ModalButton extends Component {
             </div>
           </form>
 
-          <button onClick={this.closeModal} className="btn btn-primary modal-button" type="submit">Save</button>
+          <button onClick={this.closeModal} className="btn btn-primary modal-button" id="save-button" type="submit">Save</button>
         </Modal>
       </div>
     );
