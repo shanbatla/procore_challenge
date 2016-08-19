@@ -10,6 +10,8 @@ class ModalButton extends Component {
     this.openModal = this.openModal.bind(this);
     
     this.closeModal = this.closeModal.bind(this);
+
+    this.justCloseModal = this.justCloseModal.bind(this);
     
     this.state = {
       open: false,
@@ -46,7 +48,12 @@ class ModalButton extends Component {
     } else {
       alert('Please enter valid data.');
     }
+  }
 
+  justCloseModal() {
+    this.setState({
+      open: false
+    });
   }
 
   render() {
@@ -56,7 +63,12 @@ class ModalButton extends Component {
         <button onClick={this.openModal} type="button" className="btn btn-primary modal-button">+ Contacts Keeper</button>
         <Modal isOpen={this.state.open}>
           
-          <div className="modal-header">Contacts Keeper</div>
+          <div className="modal-header">
+            Contacts Keeper
+            <button id="close-button" onClick={this.justCloseModal}>
+              x
+            </button>
+          </div>
 
           <form>
             <div className="form-group">

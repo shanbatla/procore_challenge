@@ -24,3 +24,12 @@ html * {
   color: white;
   margin-bottom: 30px;
 }
+
+#close-button {
+  border-radius: 100%;
+  float: right;
+  background-color: white;
+  color: orange;
+  border: none;
+  width: 25px;
+}
