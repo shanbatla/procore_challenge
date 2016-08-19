@@ -8,6 +8,7 @@ html * {
   padding: 20px;
   color: white;
   border-bottom: 15px solid #eeeeee;
+  margin-bottom: 30px;
 }
 
 .header-text {
