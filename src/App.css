@@ -58,3 +58,7 @@ html * {
   margin-right: 2.5px;
   width: 17.5px;
 }
+
+input {
+  margin-bottom: 30px;
+}
